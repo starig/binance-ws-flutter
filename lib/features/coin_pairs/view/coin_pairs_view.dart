@@ -25,6 +25,7 @@ class _CoinPairsViewState extends State<CoinPairsView> {
   @override
   void dispose() {
     context.read<CoinPairsCubit>().disconnectWS();
+    _searchController.dispose();
     super.dispose();
   }
 
